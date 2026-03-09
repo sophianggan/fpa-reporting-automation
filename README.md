@@ -6,7 +6,7 @@
 
 ---
 
-## 📋 Project Overview
+## Project Overview
 
 This project automates the month-end close reporting process for a Global Markets Finance / FP&A team covering four trading desks: Equities Cash, Equity Derivatives, Fixed Income Rates, and FX & Commodities.
 
@@ -23,7 +23,7 @@ This project automates the month-end close reporting process for a Global Market
 
 ---
 
-## 📊 Data Sources
+## Data Sources
 
 The pipeline is driven by **real market data**, not synthetic/random numbers:
 
@@ -49,7 +49,7 @@ Real equity returns are mapped to trading desk P&L using a weighted transformati
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
@@ -97,7 +97,7 @@ Real equity returns are mapped to trading desk P&L using a weighted transformati
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 fp&a/
@@ -131,13 +131,13 @@ fp&a/
 │   ├── raw/                     ← Pipeline output CSVs (daily P&L, plan, FX, calendar)
 │   └── processed/               ← Exported reporting views for Excel/Tableau
 │
-└── docs/
-    └── PROJECT_WRITEUP.md       ← Full project description for resume/interviews
+└── tableau/
+    └── TABLEAU_DASHBOARD_GUIDE.md ← Dashboard specs, calc fields, color palette
 ```
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - Python 3.10+
@@ -199,7 +199,7 @@ Then import the CSVs directly into Excel or Tableau (see guides in `excel/` and 
 
 ---
 
-## 📊 Pipeline Output
+## Pipeline Output
 
 Running `simulate_data.py` produces:
 
@@ -224,7 +224,7 @@ Running `simulate_data.py` produces:
 
 ---
 
-## 📊 Key Views
+## Key Views
 
 ### `vw_monthly_variance` — Core Reporting View
 | Metric | Description |
@@ -248,7 +248,7 @@ Running `simulate_data.py` produces:
 
 ---
 
-## 📈 Impact
+## Impact
 
 | Metric | Before | After |
 |--------|--------|-------|
@@ -261,18 +261,7 @@ Running `simulate_data.py` produces:
 
 ---
 
-## 🎯 Resume Bullets
-
-> **FP&A Reporting Automation** | *Excel (Power Query, PivotTables, Solver), SQL (PostgreSQL), Tableau, Python*
-
-- **Engineered** a PostgreSQL data model and Python ETL pipeline to consolidate daily P&L, budget, and prior-year data across four global-markets trading desks, enabling automated Actual vs Plan vs Prior variance analysis and reducing month-end close reporting time by ~75%.
-- **Built** self-refreshing Excel reports using Power Query connected to PostgreSQL, with PivotTables and an executive-summary template that replaced 16+ hours of manual VLOOKUP-driven processes with a one-click, sub-minute data refresh for FP&A and senior management.
-- **Designed** a Tableau dashboard suite—including a daily desk P&L scorecard, a 12-month trend view, and a Return-on-RWA scatter plot—to provide desk heads and the Head of Markets with real-time visibility into trading performance versus plan and prior year.
-- **Developed** a Solver-based capital-allocation optimizer in Excel that recommends next-month RWA distribution across desks to maximize expected P&L subject to firm-wide risk limits, directly supporting data-driven planning and scenario analysis for the monthly business review.
-
----
-
-## 📝 Tech Stack
+## Tech Stack
 
 | Tool | Role in Project |
 |------|----------------|
@@ -285,7 +274,7 @@ Running `simulate_data.py` produces:
 
 ---
 
-## 📄 License
+## License
 
 This is a portfolio project built for educational and demonstration purposes.
 Market data sourced from publicly available macroeconomic and financial timeseries datasets.
