@@ -1,0 +1,19 @@
+# ── Git ignore for FP&A Reporting Automation ──
+# Data (generated at runtime — source data IS tracked)
+data/raw/
+data/processed/
+logs/
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.env
+
+# macOS
+.DS_Store
+
+# Excel temp files
+~$*.xlsx
+~$*.xlsm
